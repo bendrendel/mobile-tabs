@@ -1,18 +1,18 @@
 const images = document.querySelectorAll('img');
-const buttons = document.querySelectorAll('button');
+const tabs = document.querySelectorAll('nav li');
 
-buttons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        clearButtons();
-        button.classList.add('active');
+tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => {
+        clearTabs();
+        tab.classList.add('active');
 
         clearImages();
         images[index].classList.add('show');
     })
 });
 
-function clearButtons() {
-    buttons.forEach(button => button.classList.remove('active'));
+function clearTabs() {
+    tabs.forEach(tab => tab.classList.remove('active'));
 }
 
 function clearImages() {
